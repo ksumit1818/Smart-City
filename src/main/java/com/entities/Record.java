@@ -134,10 +134,10 @@ public class Record {
 		this.date = date;
 	}
 
-	public Record(String firstName, String middleName, String lastName, String contact, String nationality,
+	public Record(int familyId, String firstName, String middleName, String lastName, String contact, String nationality,
 			String state, String district, String city, int ward, String gender, Date date) {
 		super();
-		this.familyId = new Random().nextInt(100000);
+		this.familyId = familyId;
 		this.firstName = firstName;
 		this.middleName = middleName;
 		this.lastName = lastName;

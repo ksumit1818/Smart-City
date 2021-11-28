@@ -15,10 +15,7 @@
 			<div class="container-fluid" style="max-width: 500px">
 				<form action="AddRecord" method="post">
 					<div class="form-group">
-						<label for="familyId">Family No: </label> <input
-							name="familyId" required type="text" class="form-control"
-							id="familyId" aria-describedby="emailHelp"
-							placeholder="Enter family Id"> <label
+						<label
 							for="firstName">First Name: </label> <input name="firstName"
 							required type="text" class="form-control" id="firstName"
 							aria-describedby="emailHelp" placeholder="Enter your first name">

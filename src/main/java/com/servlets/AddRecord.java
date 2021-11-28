@@ -27,6 +27,22 @@ public class AddRecord extends HttpServlet {
 			throws ServletException, IOException {
 
 		try {
+			int familyId;
+			//////to get max id from database
+			try {
+				
+				String qry = "SELECT MAX(familyId) FROM Record";
+				Session s = FactoryProvider.getFactory().openSession();
+				int result = s.createQuery(qry, Integer.class).getSingleResult();
+				System.out.println("here: "+ result);
+				s.close();
+				familyId = result +1;
+				
+			}catch (Exception e) {
+				familyId = 1;
+			}
+			
+			
 			String firstName = request.getParameter("firstName");
 			String middleName = request.getParameter("middleName");
 			String lastName = request.getParameter("lastName");
@@ -41,8 +57,10 @@ public class AddRecord extends HttpServlet {
 			String dateStr = request.getParameter("date");
 			Date date = new SimpleDateFormat("yyyy-mm-dd")
                     .parse(dateStr);
+			
+			
 	        
-			Record record = new Record(firstName, middleName, lastName, contact, nationality, state, district, city, ward, gender, date);
+			Record record = new Record(familyId, firstName, middleName, lastName, contact, nationality, state, district, city, ward, gender, date);
 			Session s = FactoryProvider.getFactory().openSession();
 			Transaction tx = s.beginTransaction();
 			s.save(record);
