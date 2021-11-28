@@ -2,6 +2,8 @@ package com.servlets;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -25,10 +27,22 @@ public class AddRecord extends HttpServlet {
 			throws ServletException, IOException {
 
 		try {
-			// title, content fetch
-			String title = request.getParameter("title");
-			String content = request.getParameter("content");
-			Record record = new Record();
+			String firstName = request.getParameter("firstName");
+			String middleName = request.getParameter("middleName");
+			String lastName = request.getParameter("lastName");
+			String contact = request.getParameter("contact");
+			String nationality = request.getParameter("nationality");
+			String state = request.getParameter("state");
+			String district = request.getParameter("district");
+			String city = request.getParameter("city");
+			String wardStr = request.getParameter("ward");
+			int ward = Integer.parseInt(wardStr);
+			String gender = request.getParameter("gender");
+			String dateStr = request.getParameter("date");
+			Date date = new SimpleDateFormat("yyyy-mm-dd")
+                    .parse(dateStr);
+	        
+			Record record = new Record(firstName, middleName, lastName, contact, nationality, state, district, city, ward, gender, date);
 			Session s = FactoryProvider.getFactory().openSession();
 			Transaction tx = s.beginTransaction();
 			s.save(record);

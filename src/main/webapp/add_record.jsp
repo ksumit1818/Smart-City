@@ -15,20 +15,23 @@
 			<div class="container-fluid" style="max-width: 500px">
 				<form action="AddRecord" method="post">
 					<div class="form-group">
-						<label for="firstName">First Name: </label> <input
-							name="firstName" required type="text" class="form-control"
-							id="firstName" aria-describedby="emailHelp"
-							placeholder="Enter your first name"> <label
-							for="middleName">Middle Name: </label> <input name="middleName"
-							required type="text" class="form-control" id="middleName"
-							aria-describedby="emailHelp" placeholder="Enter middle name">
-						<label for="LastName">Last Name: </label> <input name="LastName"
-							required type="text" class="form-control" id="LastName"
-							aria-describedby="emailHelp" placeholder="Enter last name">
-						<label for="familyno">Family No.: </label> <input name="familyNo"
-							required type="text" class="form-control" id="familyNo"
-							aria-describedby="emailHelp"
-							placeholder="Enter family contact number"> <label
+						<label for="familyId">Family No: </label> <input
+							name="familyId" required type="text" class="form-control"
+							id="familyId" aria-describedby="emailHelp"
+							placeholder="Enter family Id"> <label
+							for="firstName">First Name: </label> <input name="firstName"
+							required type="text" class="form-control" id="firstName"
+							aria-describedby="emailHelp" placeholder="Enter your first name">
+						<label for="middleName">Middle Name: </label> <input
+							name="middleName" required type="text" class="form-control"
+							id="middleName" aria-describedby="emailHelp"
+							placeholder="Enter middle name"> <label for="lastName">Last
+							Name: </label> <input name="lastName" required type="text"
+							class="form-control" id="lastName" aria-describedby="emailHelp"
+							placeholder="Enter last name"> <label for="contact">Contact
+							No.: </label> <input name="contact" required type="text"
+							class="form-control" id="contact" aria-describedby="emailHelp"
+							placeholder="Enter contact number"> <label
 							for="nationality">Nationality: </label> <input name="nationality"
 							required type="text" class="form-control" id="nationality"
 							aria-describedby="emailHelp" placeholder="Enter Country name">
@@ -41,18 +44,18 @@
 						<label for="city">City/Village: </label> <input name="city"
 							required type="text" class="form-control" id="city"
 							aria-describedby="emailHelp" placeholder="city name"> <label
-							for="ward">Ward No.: </label> <input name="Enter ward" required
+							for="ward">Ward No.: </label> <input name="ward" required
 							type="text" class="form-control" id="ward"
 							aria-describedby="emailHelp" placeholder="Enter ward number">
 						<label for="gender">Gender: </label>
 						<div class="form-check">
 							<label class="form-check-label"> <input type="radio"
-								class="form-check-input" name="gender">Male
+								class="form-check-input" name="gender" value="male">Male
 							</label>
 						</div>
 						<div class="form-check">
 							<label class="form-check-label"> <input type="radio"
-								class="form-check-input" name="gender">Female
+								class="form-check-input" name="gender" value="female">Female
 							</label>
 						</div>
 						<label for="firstName">DOB: </label> <input name="date" required

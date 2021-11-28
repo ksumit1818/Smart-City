@@ -28,9 +28,7 @@ public class LoginUser extends HttpServlet {
 			Session session = FactoryProvider.getFactory().openSession();	
 
 			String qry ="from Register where username='"+username +"'";
-			Register result = session.createQuery(qry, Register.class).getSingleResult();
-			System.out.println(result.getId());
-			
+			Register result = session.createQuery(qry, Register.class).getSingleResult();			
 			session.close();
 			String un= result.getUsername();
 			String p = result.getPassword();
