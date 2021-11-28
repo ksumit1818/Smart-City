@@ -35,7 +35,8 @@ public class LoginUser extends HttpServlet {
 			if (un.equals(username) && p.equals(password)) {
 				response.sendRedirect("add_record.jsp");
 			}else {
-				response.sendRedirect("login.jsp");
+				
+				response.sendRedirect("reset_pass.jsp");
 			}
 			
 			

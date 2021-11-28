@@ -22,6 +22,24 @@
 		<description></description>
 		<servlet-class>com.servlets.AddRecord</servlet-class>
 	</servlet>
+	<servlet>
+		<servlet-name>UpdateRecordServlet</servlet-name>
+		<display-name>UpdateRecordServlet</display-name>
+		<description></description>
+		<servlet-class>com.servlets.UpdateRecordServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>DeleteRecordServlet</servlet-name>
+		<display-name>DeleteRecordServlet</display-name>
+		<description></description>
+		<servlet-class>com.servlets.DeleteRecordServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ResetPasswordServlet</servlet-name>
+		<display-name>ResetPasswordServlet</display-name>
+		<description></description>
+		<servlet-class>com.servlets.ResetPasswordServlet</servlet-class>
+	</servlet>
 	<servlet-mapping>
 		<servlet-name>RegisterUser</servlet-name>
 		<url-pattern>/RegisterUser</url-pattern>
@@ -33,5 +51,17 @@
 	<servlet-mapping>
 		<servlet-name>AddRecord</servlet-name>
 		<url-pattern>/AddRecord</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>UpdateRecordServlet</servlet-name>
+		<url-pattern>/UpdateRecordServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DeleteRecordServlet</servlet-name>
+		<url-pattern>/DeleteRecordServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ResetPasswordServlet</servlet-name>
+		<url-pattern>/ResetPasswordServlet</url-pattern>
 	</servlet-mapping>
 </web-app>

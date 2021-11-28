@@ -30,6 +30,10 @@
 					<div class="container text-center">
 						<button class="btn btn-outline-primary text-center m-3" type="submit">Log in</button>
 					</div>
+					
+					<div class="container text-center">
+						<a href="reset_pass.jsp">Reset Password?</a>
+					</div>
 				</form>
 			</div>
 		</div>
