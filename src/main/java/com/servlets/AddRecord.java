@@ -70,6 +70,7 @@ public class AddRecord extends HttpServlet {
 			PrintWriter out = response.getWriter();
 			out.println("<h1 style='text-align:center;'>Record is added successfully</h1>");
 			out.println("<h1 style='text-align:center;'><a href='all_records.jsp'>View All Records</a></h1>");
+			out.println("<h1 style='text-align:center;'><a href='add_record.jsp'>Add Another Record</a></h1>");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
