@@ -18,6 +18,7 @@
 		Session s = FactoryProvider.getFactory().openSession();
 		//permanent changes in database wont occur if we dont use this
 		Record record = s.get(Record.class, familyId);
+		s.close();
 		%>
 		<form action="UpdateRecordServlet" method="post">
 			<!--  type="hidden" -->
